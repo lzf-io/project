@@ -1,0 +1,85 @@
+site_name: 技术文档
+site_description: 技术方案、架构设计、API 文档
+site_author: zhengfang
+
+# Repository
+repo_name: 'GitHub'
+repo_url: 'https://github.com/YOUR_USERNAME/YOUR_REPO'
+
+# Theme
+theme:
+  name: material
+  language: zh
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到暗色模式
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到亮色模式
+  
+  features:
+    - navigation.tabs           # 顶部标签导航
+    - navigation.sections       # 侧边栏分组
+    - navigation.top            # 返回顶部按钮
+    - search.highlight          # 搜索高亮
+    - search.suggest            # 搜索建议
+    - content.code.copy         # 代码复制按钮
+    - content.tabs.link         # 标签页链接
+
+# Markdown Extensions
+markdown_extensions:
+  - pymdownx.highlight:         # 代码高亮
+      anchor_linenums: true
+  - pymdownx.inlinehilite       # 行内代码高亮
+  - pymdownx.snippets           # 代码片段
+  - pymdownx.superfences:       # 支持 Mermaid
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:            # 标签页
+      alternate_style: true
+  - pymdownx.tasklist:          # 任务列表
+      custom_checkbox: true
+  - admonition                  # 提示框
+  - pymdownx.details            # 折叠详情
+  - attr_list                   # 属性列表
+  - md_in_html                  # HTML 中的 Markdown
+  - tables                      # 表格
+  - toc:                        # 目录
+      permalink: true
+
+# Plugins
+plugins:
+  - search:                     # 搜索功能
+      lang:
+        - zh
+        - en
+
+# Navigation
+nav:
+  - 首页: index.md
+  - 架构设计:
+      - 概览: architecture/overview.md
+      - Stripe Billing 接入方案: architecture/stripe-billing.md
+  - API 文档:
+      - REST API 规范: api/rest-api.md
+  - 使用指南:
+      - 部署指南: guides/deployment.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YOUR_USERNAME

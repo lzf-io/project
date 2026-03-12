@@ -9,6 +9,7 @@
 | 项目 | 描述 | 在线文档 | 状态 |
 |------|------|----------|------|
 | [Stripe Billing](./stripe-billing/) | 订阅和周期账单系统接入方案 | [查看文档](https://lzf-io.github.io/project/stripe-billing/) | ✅ 已完成 |
+| [产品创建与AI生成系统](./product-creation-system/) | 独立站商户产品创建、AI生成、Dropshipping推荐平台 | [查看文档](https://lzf-io.github.io/project/product-creation-system/) | ✅ 已完成 |
 | 微服务架构 | 微服务拆分和治理方案 | - | 📝 规划中 |
 | API 网关 | 统一接入层设计 | - | 📝 规划中 |
 

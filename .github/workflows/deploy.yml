@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  deploy-stripe-billing:
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
@@ -33,6 +33,11 @@ jobs:
         working-directory: stripe-billing
         run: |
           mkdocs build --site-dir ../site/stripe-billing
+      
+      - name: Build product-creation-system docs
+        working-directory: product-creation-system
+        run: |
+          mkdocs build --site-dir ../site/product-creation-system
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
